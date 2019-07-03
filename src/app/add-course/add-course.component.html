@@ -5,23 +5,28 @@
         <form [formGroup]="courseData">
           <div class="form-group">
             <label>Course Name</label>
-            <input type="text" class="form-control" formControlName="courseName" aria-describedby="name" placeholder="Course Name">
+            <input type="text" class="form-control" id="courseName" formControlName="courseName" aria-describedby="name" placeholder="Course Name"/>
+            <div *ngIf="submitted && this.f.courseName.invalid" class="alert alert-danger alert-dismissible fade show">Please enter course name</div>
           </div>
           <div class="form-group">
             <label>Course Title</label>
             <input type="text" class="form-control" formControlName="courseTitle" aria-describedby="title" placeholder="course title">
+            <div *ngIf="submitted && this.f.courseTitle.invalid" class="alert alert-danger alert-dismissible fade show">Please enter course title</div>
           </div>
           <div class="form-group">
             <label>Course meta-tag</label>
             <input type="text" class="form-control" formControlName="courseMetaTag" aria-describedby="meta-tag" placeholder="course meta-tag">
+            <div *ngIf="submitted && this.f.courseMetaTag.invalid" class="alert alert-danger alert-dismissible fade show">Please enter course meta tag</div>
           </div>
           <div class="form-group">
             <label>Course meta description</label>
             <input type="text" class="form-control" formControlName="courseMetaDescription" aria-describedby="meta-description" placeholder="course meta-description">
+            <div *ngIf="submitted && this.f.courseMetaDescription.invalid" class="alert alert-danger alert-dismissible fade show">Please enter course meta description</div>
           </div>
           <div class="form-group">
             <label>Course overview</label>
             <input type="text" class="form-control" formControlName="courseOverview" aria-describedby="overview" placeholder="course overview">
+            <div *ngIf="submitted && this.f.courseOverview.invalid" class="alert alert-danger alert-dismissible fade show">Please enter course overview</div>
           </div>
       
           <button type="submit" (click)="storeData()" class="btn btn-primary">Add</button>
