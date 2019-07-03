@@ -1,0 +1,29 @@
+<section class="containerForm wrapper">
+        <div class="alert alert-primary courseLabel" role="alert">
+                Add course details
+              </div>
+        <form [formGroup]="courseData">
+          <div class="form-group">
+            <label>Course Name</label>
+            <input type="text" class="form-control" formControlName="courseName" aria-describedby="name" placeholder="Course Name">
+          </div>
+          <div class="form-group">
+            <label>Course Title</label>
+            <input type="text" class="form-control" formControlName="courseTitle" aria-describedby="title" placeholder="course title">
+          </div>
+          <div class="form-group">
+            <label>Course meta-tag</label>
+            <input type="text" class="form-control" formControlName="courseMetaTag" aria-describedby="meta-tag" placeholder="course meta-tag">
+          </div>
+          <div class="form-group">
+            <label>Course meta description</label>
+            <input type="text" class="form-control" formControlName="courseMetaDescription" aria-describedby="meta-description" placeholder="course meta-description">
+          </div>
+          <div class="form-group">
+            <label>Course overview</label>
+            <input type="text" class="form-control" formControlName="courseOverview" aria-describedby="overview" placeholder="course overview">
+          </div>
+      
+          <button type="submit" (click)="storeData()" class="btn btn-primary">Add</button>
+        </form>
+      </section>
