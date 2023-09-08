@@ -1,0 +1,15 @@
+<p>ng-container-test works!</p>
+<ng-content></ng-content>
+<div> 
+    <ng-container *ngIf="enable">
+    <div *ngFor = "let list of listData">
+        <label>{{list}}</label>
+      </div>
+    </ng-container>
+
+    <ng-template *ngIf="enable else elseBlock">Success</ng-template>
+
+    <ng-template #elseBlock> <div>else block</div></ng-template>
+    <label for="">data</label>
+    <ng-content select = "[dataLohith]"></ng-content>
+</div>

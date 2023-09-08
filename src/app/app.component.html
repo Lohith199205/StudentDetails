@@ -1,7 +1,7 @@
-<section class="">
+<section appAddColour class="">
         <header class="mainHeader">
-            <nav class="navbar navbar-dark navbar-expand-lg bg-primary">
-                    <a class="navbar-brand" href="#">Navbar</a>
+            <!-- <nav class="navbar navbar-dark navbar-expand-lg bg-primary">
+                    <a appAddColour class="navbar-brand" href="#">Navbar</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                     </button>
@@ -11,18 +11,27 @@
                           <a class="nav-link" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#">Features</a>
+                          <a class="nav-link" href="#">Features {{2 | customPipe}}</a>
+                        </li>
+                         <li class="nav-item">
+                          <a class="nav-link" (click) = "Increment()">Increment</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#">Pricing</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="#">Disabled</a>
+                          <a class="nav-link" (click) = "Decrement()">Disabled</a>
                         </li>
                       </ul>
+                      <app-ng-container-test>
+                                <label>testing ng content</label>
+                                <label dataLohith>ng content with selector</label>
+                      </app-ng-container-test>
                     </div>
-            </nav>
+            </nav> -->
           </header>
+<div>
+  <label>{{obser | async}}</label>
+  <label>{{obser1 | async}}</label>
+</div>
+
           <router-outlet></router-outlet>
       <footer class="footer">
     

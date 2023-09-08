@@ -13,7 +13,6 @@ const root: Routes =[
   imports: [
     CommonModule,
     RouterModule.forRoot(root),
-    DashBoardRoutingModule
   ],
   exports:[
     RouterModule

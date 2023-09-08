@@ -65,18 +65,21 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "AdminDashBoard:build"
+            "browserTarget": "AdminDashBoard:build",
+            "proxyConfig": "src/proxy.conf.json"
           },
           "configurations": {
             "production": {
-              "browserTarget": "AdminDashBoard:build:production"
+              "browserTarget": "AdminDashBoard:build:production",
+              "proxyConfig": "src/proxy.conf.json"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "AdminDashBoard:build"
+            "browserTarget": "AdminDashBoard:build",
+            "proxyConfig": "src/proxy.conf.json"
           }
         },
         "test": {
@@ -123,5 +126,8 @@
         }
       }
     }},
-  "defaultProject": "AdminDashBoard"
+  "defaultProject": "AdminDashBoard",
+  "cli": {
+    "analytics": "add04f73-37d1-4a50-a659-1b7990ac2f1b"
+  }
 }
